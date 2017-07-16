@@ -11,8 +11,8 @@ v = "aeiou"
 lst= ['a','e','i','o','u']
 c = "qwrtypsdfghjklzxcvbnm"
 check = re.findall(r'[^'+c+'|'+c.upper()+']',s)
-
-str=''.join(check).replace(" ",'')
-print(str)
-result = re.findall(r'[^'+v+'|'+v.upper()+']', str)
-print(result)
+print(check)
+a=set(lst).difference(set(check))
+for i in a:
+    print(i)
+#vowel_pos = [ i for i,v in enumerate(s) if v.lower() in ('a','e','i','o','u','y') ]
